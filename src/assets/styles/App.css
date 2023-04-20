@@ -1,0 +1,62 @@
+#root {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.table {
+	display: grid;
+	grid-template-areas: "selection" "editor";
+	grid-template-columns: 1fr 3fr;
+	height: 100vh;
+}
+
+.tableSelection {
+	border: 1px solid white;
+	grid-area: "selection";
+}
+
+.tableEditor {
+	border: 1px solid white;
+	grid-area: "editor";
+}
+
+.tableHeader {
+	display: flex;
+	justify-content: space-between;
+}
+
+.tableRow {
+	display: flex;
+	justify-content: space-between;
+}
+
+.tableCell {
+	border: 1px solid white;
+	width: 100%;
+}
+
+.tableItem {
+	width: 100%;
+	font-size: 1.25rem;
+	padding: 0.5rem;
+}
+
+.toast {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	padding: 10px 20px;
+	background-color: #333;
+	color: #fff;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+	z-index: 9999;
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.toast.show {
+	opacity: 1;
+	transform: translateY(0);
+}
